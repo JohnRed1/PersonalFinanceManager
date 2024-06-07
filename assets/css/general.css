@@ -1,0 +1,82 @@
+html {
+  font-family:"Outfit", "Montserrat", "Raleway", Arial;
+}
+
+
+body,p {
+  padding: 0;
+  margin: 0; 
+  
+}
+
+p, button {
+  font-family: "Outfit";
+}
+
+body {
+  background-color: white;
+  padding-top: 70px;
+  overflow-x: hidden; 
+}
+
+.general-container {
+  width: 100vw;
+  background-color:white;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-middle {
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+
+button:active,
+a:active {
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar {
+  transition: all 0.5s;
+  width: 10px;
+  background-color: #71767b;
+  opacity: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar-thumb:hover  {
+  background-color: #b3b0b0;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  max-height: 70px;
+  background-color: #cececf;
+  border-radius: 6px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

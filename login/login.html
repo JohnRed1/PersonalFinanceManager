@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/Sign up.css">
+    <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+        Author: John Inusa
+        Page: Login page
+    ">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-32x32.svg" >
+    <title>Login to FundTrackr</title>
+</head>
+<body>
+    <div class="general-container">
+        <div class="cont">
+
+            <div>
+                <div class="logodiv">
+                    <img src="../assets/images/Naira4-removebg-preview.png" alt="logo">
+                    <h1>FundTrackr</h1>
+                </div>
+    
+                <div class="linediv">
+                    <div class="line"></div>
+                        <p id="login-p">Login to FundTrackr</p>
+                    <div class="line"></div>
+                </div>
+            
+                <form action="" id="form" method="post" class="formlogin">
+                  
+                    <label for="username"></label>
+                    <input type="text" name="username" id="username" placeholder="Username" required class="emailp"><br>
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Password" required><br>
+                    <button type="button" onclick="returnData()" id="liveToastBtn">Login</button>
+                </form>
+                <p>Don't have an account yet? <a href="./Signup.html">Sign Up</a></p>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="toast-container position-fixed top-0 end-0 p-0 ">
+            <div id="liveToastSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+              <div class="toast-body d-flex justify-content-center align-items-center ">
+                <span style="font-size: 20px; font-weight: 700; margin-right: 7px;" class="text-success">&checkmark;</span>
+                <p class="text-success p-0 m-0 fw-medium">Login Successful</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="toast-container position-fixed top-0 end-0 p-0">
+            <div id="liveToastFail" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+              <div class="toast-body d-flex justify-content-center align-items-center ">
+                <span style="font-size: 26px; font-weight: 600; margin-right: 7px;" class="text-danger ">&times;</span>
+                <p class="text-danger p-0 m-0 fw-medium">  Login Failed! Check email or password</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="toast-container position-fixed top-0 end-0 p-0 ">
+            <div id="liveToastEmpty" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+        
+              <div class="toast-body d-flex justify-content-center align-items-center ">
+                <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+                <p class="text-danger p-0 m-0 fw-medium">Please fill all input fields</p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="back" href="../index.html">Back to home</a>
+
+    <script>
+
+        function toastyes(){
+            const toastTrigger = document.getElementById('liveToastBtn')
+            const toastLiveExample = document.getElementById('liveToastSuccess')
+
+            if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show()
+            }
+
+            const myToastEl = document.getElementById('liveToastSuccess')
+            myToastEl.addEventListener('hidden.bs.toast', () => {
+              window.location.href = '../app/dashboard.html';
+            })
+        }
+
+        function toastno(){
+            const toastTrigger = document.getElementById('liveToastBtn')
+            const toastLiveExample = document.getElementById('liveToastFail')
+
+            if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show()
+            }
+        }
+
+        function toastempty(){
+            const toastTrigger = document.getElementById('liveToastBtn')
+            const toastLiveExample = document.getElementById('liveToastEmpty')
+
+            if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show()
+            }
+        }
+
+        function returnData(){
+            let username, password;
+            username = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+
+            let mainBalance = JSON.parse(localStorage.getItem(`${username}Main`)) || 0.00; 
+
+            let user_record =new Array();
+            user_record=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+            if( username == "" || password == ""){
+                toastempty();
+            }
+            else if(user_record.some((v)=>{
+                return v.username==username && v.password==password;
+            })){
+                toastyes();
+                let current_user = user_record.filter((v)=>{
+                    return v.username==username && v.password==password
+                })[0]
+                localStorage.removeItem('username');
+                localStorage.removeItem('password');
+                localStorage.removeItem('firstname');
+                localStorage.removeItem('lastname');
+                localStorage.removeItem('email');
+
+                localStorage.setItem("username", current_user.username);
+                localStorage.setItem("password", current_user.password);
+                localStorage.setItem("firstname", current_user.firstname);
+                localStorage.setItem("lastname", current_user.lastname);
+                localStorage.setItem("email", current_user.email);
+                localStorage.setItem(`${username}Main`, JSON.stringify(mainBalance));
+                
+                localStorage.getItem(`${username}Currency`) || localStorage.setItem(`${username}Currency`, '$');
+                
+            }
+            else{
+                toastno();
+            };
+        }
+    
+    </script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>

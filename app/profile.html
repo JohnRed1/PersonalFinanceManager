@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../assets/js/check-login.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <title>Profile - FundTrackr</title>
+    <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: John Inusa
+    Page: Profile
+  ">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon-32x32.svg" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <style>
+    body {
+      overflow-y: visible;
+    }
+  </style>
+</head>
+<body>
+
+
+  
+        
+                   
+   <div class="box m-0 p-0 row">
+
+      <aside class=" bg-black col-xl-9  col-lg-3 col-md-1 d-sm-none d-none d-xxl-block   d-md-block d-lg-block d-xl-block position-fixed  bottom-0   
+      pt-lg-4  ps-lg-4 pe-lg-4  pb-lg-3
+      pt-xl-4  ps-xl-4 pe-xl-4  pb-xl-3
+      pt-md-5  ps-md-4 pe-md-4  pb-md-3
+      pt-xxl-4  ps-xxl-4 pe-xxl-4  pb-xxl-4
+      h-100
+      
+      ">
+        <div class="flex d-flex justify-content-center justify-content-lg-start justify-content-md-center justify-content-sm-center  justify-content-xl-start  justify-content-xxl-start   p-0 mt-4 logo-box-2  " style="margin-bottom: 34px;">
+          <img src="../assets/images/Naira4.png" alt="logo" width="27px" height="27px" class="rounded-4">
+          <p class="d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">FundTrackr</p>
+        </div>
+
+        <a href="dashboard.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center   rounded-3 mb-3 
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-0 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 
+          ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Dashboard</p>
+        </div>
+        </a>
+
+        <a href="profile.html" onclick="userValues()">
+            <div class="aside-options-active p-0 m-0 d-flex align-items-start  rounded-3
+            justify-content-md-center
+            justify-content-lg-start 
+            pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+            pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+            pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+            
+            mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+            mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+            mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+            <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+              person
+            </span>
+            <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block    ">&nbsp; Profile</p>
+          </div>
+        </a>
+
+        <a href="income.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Income</p>
+        </div>
+        </a>
+
+        <a href="expenses.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Expenses</p>
+        </div>
+        </a>
+
+       <a href="savings-planner.html">
+        <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+        justify-content-md-center
+        justify-content-lg-start 
+        pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+        pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+        pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+        
+        mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+        mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+        mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+        <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+          savings
+          </span>
+        <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Savings Planner</p>
+      </div>
+       </a>
+
+        <a href="financial-analysis.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-start  rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Financial Analysis</p>
+        </div>
+        </a>
+
+        
+        <div class="p-0 mt-4 d-flex align-items-center mb-4 d-none d-sm-none d-md-none  d-lg-flex  d-xl-flex    ">
+
+          <div class="initials-pic  m-0 d-flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0" id="initialsBig"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeName ">
+              
+            </p>
+            <p class="text-success fw-medium ">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 d-flex align-content-center justify-content-start  ">
+            <button onclick="logOut()" class="d-flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100 d-none d-sm-none d-md-none  d-lg-inline-block  d-xl-inline-block   " id="logout">
+              
+              Log out
+            </button>
+        </div>
+      </aside>
+
+      <div class="col-xl-12   col-lg-12  col-md-12  col-sm-12  pt-5 right-box" onclick="closeNav()">
+
+        <div class=" mb-3 d-flex align-items-center   justify-content-between  w-100 ">
+          <div>
+            <p class="h1 mb-3 "> 
+              Your Profile
+            </p>
+  
+            <p class="ms-2 mt-2 ">
+              View and edit your profile details
+            </p>
+          </div>
+
+          <div class="d-flex justify-content-end align-items-center me-3  ">
+            <p>Not you? &nbsp;</p>
+            <p class=" fw-medium log-out-text"><span  style="cursor: pointer;" onclick="logOut();">Logout</span></p>
+          </div>
+
+        </div>
+
+        <div class=" w-100   h-100 pt-3    ps-0 d-flex ">
+          <div class="w-100  bg-white position-relative   h-auto ps-xxl-5 pe-xxl-5   ps-xl-5 pe-xl-5 ps-lg-4 pe-lg-2 ps-md-4 pe-md-3   pt-5 rounded-4 shadow-lg ">
+
+            <div class="card-header ">
+              <p class="lead fw-medium mb-5 fs-4  ps-xl-0 ps-lg-3 ">Account Information</p>
+            </div>
+
+            <div class="pe-5 flex  profile-box mb-5 ">
+
+              <div class="bg-success rounded-pill border border-2 border-white flex align-items-center justify-content-center  " style="width: 150px; height: 150px;">
+                <p class="text-white fw-medium" style="font-size: 47px;" id="nameAvatarBig">
+                  
+                </p>
+              </div> 
+
+              <div class="pt-1 underline   mb-3 ">
+                <p class="profile-label  fw-medium mb-1 text-secondary ">FIRST NAME</p>
+                <p class="profile-firstname mt-3"></p>
+              </div>
+
+
+
+              <div class="pt-1 underline  mb-3  ">
+                <p class="profile-label  fw-medium mb-1 text-secondary">USER NAME</p>
+                <p class="profile-username mt-3 "></p>
+              </div>
+
+              <div class="d-flex mt-4 ">
+                <button type="button" class="btn btn-success " onclick=" toggleVerifyOn()">
+                  Edit details
+                </button>
+              </div>
+
+              <div class=" flex flex-column align-items-center mb-1">
+                <p class="profile-label  fw-medium mb-1 text-danger ">Danger Zone!</p>
+                <button type="button" class="btn btn-danger  " onclick=" toggleDeleteOn()">
+                  Delete Account
+                </button>
+              </div>
+
+            </div>
+
+            
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button focus-ring focus-ring-light bg-white text-black " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 18px; border:none; ">
+                    Account preferences
+
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse hiding " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                   <div class=" ">
+                      <div class="mb-3 d-flex flex-column mt-2   ">
+                        
+                        <div class="mb-5  w-100 ">
+                          <label for="currency" class="">Currency</label>
+                          <select class="form-select form-select-sm  w-25 mt-3 focus-ring focus-ring-light " name="currencyOptions" id="currency" style="cursor: pointer;">
+                          
+                            <option value="&#8358;">NGN (&#8358;) (Default)</option>
+                            <option value="&euro;">EUR (&euro;)</option>
+                            <option value="&pound;">GBP (&pound;)</option>
+                            <option value="&dollar;"> USD </option>
+                            <option value="&#165;">JPY(&#165;)</option>
+                          </select>
+
+
+                        </div>
+
+                        <div class="mb-5 ">
+                            <label for="themes" class="form-label">Theme settings</label>
+                            <p class="text-success pt-2 pb-3 fst-italic" style="font-size: 13px;">Upgrade to FundTrackr premium to use custom themes</p>
+                            <select class="form-select form-select-sm w-25  " name="Themes" id="themes" disabled="disabled">
+                              <option selected value="light">Light (Default)</option>
+                              <option value="dark">Dark</option>
+                              
+                            </select>
+                        </div>
+
+                        <div>
+                          <p class="mb-3 ">
+                            Accounts
+                          </p>
+
+                          <p class="text-success pt-2 pb-3 fst-italic" style="font-size: 13px;">Upgrade to FundTrackr premium to add more accounts</p>
+
+                          <div class="d-flex flex-column ">
+                            <label for="mainBal">Main</label>
+                            <input type="text" id="mainBal" placeholder="0.00" class="p-2 border border-secondary-subtle rounded-3 w-25 ">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mt-5">
+                        <button type="button" class="btn btn-outline-success " style="transition: background 0.5s, color 0.5s;" onclick="updateCurrency();" id="prefrencesSave">Save changes</button>
+
+                        <button class="btn btn-dark ms-3 " onclick="logOut();">
+                          Log out
+                        </button>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            
+  
+            
+
+          </div>
+        </div>
+        
+
+      </div>
+
+   </div>
+
+
+   <aside class=" bg-black position-fixed top-0 bottom-0 end-0 sidenav
+      pt-3  pb-3" id="mySidenav">
+        <div class="flex justify-content-start ms-4   align-items-center ps-2 mb-3 logo-box ">
+          <div class="flex mb-2 justify-content-start    p-0 mt-5  ">
+            <img src="../assets/images/transp-dollar.png" alt="logo" width="45px" height="45px">
+            <p>FundTrackr</p>
+          </div>
+
+            <a href="javascript:void(0)" class="closebtn text-white fw-bold fs-3  " onclick="closeNav()">&times;</a>
+          
+        </div>
+
+        
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('dashboard')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Dashboard</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-100  ms-4 pb-1 mb-3  rounded-3  d-active" onclick="redirect('profile')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            person
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  ">&nbsp; Profile</p>
+          
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('income')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Income</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('expenses')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Expenses</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3 aside-options-static" onclick="redirect('savings-planner')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            savings
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Savings Planner</p>
+        </div>
+
+        
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3  aside-options-static" onclick="redirect('financial-analysis')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Financial Analysis</p>
+        </div>
+
+        
+        <div class="p-0 mt-5  flex align-items-center mb-4 ms-4 ">
+
+          <div class="initials-pic  m-0 flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0 initials " id="initialsSmall"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeNameSmall">
+              
+            </p>
+            <p class="text-success fw-medium ">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 flex align-content-center justify-content-start ms-4 me-3   ">
+            <button onclick="logOut()" class="flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100" id="logout">
+              
+              Log out
+            </button>
+        </div>
+   </aside>
+            
+   <div id="menu" class="position-fixed">
+    <button class=" rounded-pill border p-2  border-opacity-10 me-3 d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none d-xxl-none " onclick="openNav()" >
+      <img src="../assets/images/hamburger-menu.svg" alt="dropdown" width="25px" >
+    </button>
+  </div>
+
+  <!--Modals-->
+  <!--Enter password modals-->
+  <!-- Button trigger modal -->
+<div class="position-fixed profileModal rounded-4 " id="verifyModal">
+  <div class="modal-dialog  modal-dialog-centered ">
+    <div class="modal-content ">
+      <div class="modal-header pb-3 border-bottom mb-2 ">
+        <h1 class="modal-title fs-5" >Enter password</h1>
+        <button type="button" class="btn-close"  aria-label="Close" onclick="toggleVerifyOff()" ></button>
+      </div>
+      <div><p class="modal-text pt-2 pb-1 ">Because you're accessing sensitive info, we need to verify that it's you.</p></div>
+    
+        <div class="modal-body mb-4 mt-3 ">
+          <input type="text" placeholder="Enter password" class="p-2 rounded-3 w-100  " id="verifyCheck" autocomplete="off">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary me-2 " onclick=" toggleVerifyOff()">Cancel</button>
+          <button class="btn btn-success " onclick="verifyUser()" id="verifyPswBtn" >Enter</button>
+        </div>
+  
+    </div>
+  </div>
+</div>
+
+<!--Delete Modal-->
+<div class="position-fixed profileModal rounded-4 " id="deleteModal">
+  <div class="modal-dialog  modal-dialog-centered ">
+    <div class="modal-content ">
+      <div class="modal-header pb-3 border-bottom mb-2 ">
+        <h1 class="modal-title fs-5 text-danger " >Delete Confirmation</h1>
+        <button type="button" class="btn-close"  aria-label="Close" onclick="toggleDeleteOff()" ></button>
+      </div>
+      <div><p class="modal-text pt-2 pb-1 text-danger  ">Enter your password to permanently delete your account</p></div>
+    
+        <div class="modal-body mb-4 mt-3 ">
+          <input type="text" placeholder="Enter password" class="p-2 rounded-3 w-100  " id="deleteCheck" autocomplete="off">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary me-2 " onclick=" toggleDeleteOff()">Cancel</button>
+          <button class="btn btn-danger  " onclick="verifyDelete()" >Enter</button>
+        </div>
+  
+    </div>
+  </div>
+</div>
+
+
+<!--profile details edit modal-->
+<div class="position-fixed  bg-white rounded-4 shadow-lg ps-xl-5 pe-xl-5 py-xl-5  p-xxl-4 p-md-4 p-sm-3 " id="profileDetails">
+  <div class="m-0 pb-3 ">
+    <p class="fs-4 m-0 p-0 fw-medium ">Personal Details</p>
+  </div>
+
+  <form action="">
+    <div class="w-100 " class="verify-form">
+      
+      <div class="w-100 mb-3 ">
+        <label for="newFirstname" class="d-block ">Firstname</label>
+        <input type="text" name="firstname" id="newFirstname"class="d-flex  border border-dark-subtle  p-2 rounded-3 w-100 ">
+      </div>
+
+
+      <div class="w-100 mb-3 ">
+        <label for="newLastname" class="d-block ">Lastname</label>
+        <input type="text" name="lasttname" id="newLastname"class="d-flex  border border-dark-subtle  p-2 rounded-3 w-100  ">
+      </div>
+
+
+      <div class="w-100 mb-3 ">
+        <label for="newUsername"class="d-block ">Username</label>
+        <input type="text" name="username" id="newUsername"class="d-flex border border-dark-subtle  p-2 rounded-3 w-100">
+      </div>
+
+      <div class="w-100 mb-3 ">
+        <label for="newEmail"class="d-block ">Email</label>
+        <input type="text" name="email" id="newEmail"class="d-flex border border-dark-subtle  p-2 rounded-3 w-100 ">
+      </div>
+
+      <div class="w-100 mb-3 ">
+        <label for="newPassword"class="d-block ">Password</label>
+        <input type="password" name="email" id="newPassword"class="d-flex border border-dark-subtle  p-2 rounded-3 w-100 ">
+      </div>
+      
+
+      <div class="mt-4 pt-2 d-flex  justify-content-end ">
+        <a class="btn btn-secondary me-3 " onclick="closeAccessDetails(); toggleVerifyOff()">
+          Cancel
+        </a>
+
+        <button type="button" class="btn btn-success " id="liveToastBtn" onclick="updateDetails(); ">
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </form>
+  
+</div>
+
+
+
+<div id="overlay">
+
+</div>
+
+
+
+
+
+<!--TOASTS AND NOTIFICATIONS-->
+
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastPS" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+      <span style="font-size: 20px; font-weight: 700; margin-right: 7px;" class="text-success">&checkmark;</span>
+      <p class="text-success p-0 m-0">Profile Updated</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastP" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+        <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+      <p class="text-danger p-0 m-0">Please fill out all fields!</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="toast-container position-fixed top-0 end-0 p-0 ">
+<div id="liveToastU" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+  <div class="toast-body d-flex justify-content-center align-items-center">
+    <span style="font-size: 26px; font-weight: 600; margin-right: 7px;" class="text-danger ">&times;</span>
+    <p class="text-danger p-0 m-0">Usernames can't be more than 10 characters!</p>
+  </div>
+</div>
+</div>
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastW" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+      <span style="font-size: 26px; font-weight: 600; margin-right: 7px; padding-bottom: 2px;" class="text-danger mb-1 ">&times;</span>
+      <p class="text-danger p-0 m-0">Invalid Email!</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastWrong" class="toast p-0 " role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+      <span style="font-size: 26px; font-weight: 600; margin-right: 7px; padding-bottom: 2px;" class="text-danger mb-1 ">&times;</span>
+      <p class="text-danger p-0 m-0">Invalid Amount!</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastPref" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+     
+      <p class="text-success p-0 m-0">&checkmark; &nbsp; &nbsp;Preferences updated!</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastD" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+        <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+      <p class="text-danger p-0 m-0">Email or username already in use</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="toast-container position-fixed top-0 end-0 p-0">
+  <div id="liveToastE" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div class="toast-body d-flex justify-content-center align-items-center">
+        <span style="font-size: 20px; font-weight: bold; margin-right: 7px;" class="text-danger ">!!</span>
+      <p class="text-danger  p-0 m-0">Passwords must not be less than 6 characters!</p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="../assets/js/profile.js"></script>
+
+  <script>
+    let firstLetter = (localStorage.getItem("firstname").slice(0,1));
+    let lastLetter = (localStorage.getItem("lastname").slice(0,1));
+    document.getElementById('nameAvatarBig').innerHTML = firstLetter + lastLetter;
+    document.getElementsByClassName('initials').innerHTML = firstLetter + lastLetter;
+
+    let firstname = localStorage.getItem('firstname');
+    let lastname = localStorage.getItem('lastname');
+
+    document.querySelector('.activeName').innerHTML = firstname + ' ' + lastname;
+    document.querySelector('.activeNameSmall').innerHTML = firstname + ' ' + lastname;
+
+    document.getElementById('initialsBig').innerHTML = firstLetter + lastLetter; 
+    document.getElementById ('initialsSmall').innerHTML = firstLetter + lastLetter;
+
+    document.querySelector('.profile-firstname').innerHTML = localStorage.getItem('firstname');
+    document.querySelector('.profile-username').innerHTML = localStorage.getItem('username');
+  </script>
+
+
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/slidenav.js"></script>
+
+</body>
+</html>

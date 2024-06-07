@@ -1,0 +1,653 @@
+body {
+  padding: 0;
+  transition: all 0.6s ease;
+  overflow-y: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.box aside {
+  height: 100%;
+  overflow: auto;
+  max-width: 255px;
+}
+label {
+  font-family: 'Outfit', 'Josefin sans', Montserrat, Arial;
+  margin-bottom: 5px;
+  outline: none;
+  
+}
+
+.qi-box {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 10px;
+  height: 11.5rem;
+}
+
+.q-actions {
+  background-color:  rgba(48, 48, 48, 0.61);
+  
+}
+
+
+
+.qa2 {
+ height: 150px;
+}
+
+.qa-cont {
+  /* background-color: white;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 25px; */
+  /* width: 100dw; */
+
+}
+
+
+
+.i-con {
+  background-color: rgb(248, 248, 248);
+}
+
+.i1, .i2 {
+  background-color: rgba(230, 230, 230, 0.63);
+  width: 24rem;
+  height: 9rem;
+}
+
+
+.i3 {
+  background-color: black;
+  width: 24rem;
+  height: 9rem;
+}
+
+#mySideNav a {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px !important;
+}
+
+
+#newUsername, #newPassword, #newEmail, #newFirstname, #newLastname{
+  outline: none;
+}
+
+#newUsername:focus, #newPassword:focus, #newEmail:focus, #newFirstname:focus, #newLastname:focus{
+  border: 1px solid rgb(6, 43, 6) !important;
+}
+
+.log-out-text {
+  color: rgb(221, 28, 28);
+}
+
+.log-out-text:hover {
+  text-decoration: underline;
+  color: rgb(221, 28, 28) !important;
+}
+#profileDetails {
+  z-index: 100;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: auto;
+}
+
+#overlay {
+  transition: all 0.6s;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+#verifyModal, #deleteModal {
+  transition: all 0.5s;
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+  width: 43vw;
+  height: auto;
+  background-color: white;
+  padding: 30px 25px;
+}
+
+
+
+#verifyCheck {
+  border: solid 1px gray;
+
+}
+
+#deleteCheck {
+  border: solid 1px gray;
+}
+#verifyCheck:focus,
+#deleteCheck:focus {
+  border: 1px solid rgb(6, 43, 6);
+  outline: none;
+}
+
+#initialsBig {
+  font-size: 20px;
+}
+
+.box {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.aside-options,
+.aside-options-static {
+  background-color: rgba(19, 19, 19, 0.808);
+  transition: background-color 0.4s;
+}
+
+.aside-options:hover,
+.aside-options-active:hover {
+  cursor: pointer;
+  background-color: rgba(48, 48, 48, 0.808);
+}
+
+.aside-options:active,
+.aside-options-static:active,
+.aside-options-active:active {
+  opacity: 0.7;
+}
+
+.aside-options-active,
+.aside-options-active-static,
+.d-active {
+  background-color: rgba(48, 48, 48, 0.808);
+}
+
+.initials {
+  padding: 0;
+  padding-top: 2px;
+  font-weight: 600;
+  font-family: Josefin Sans;
+  font-size: 20px;
+}
+
+.initials-pic {
+  padding: 25px ;
+  background-color: seagreen;
+  width: 50px;
+  height: 50px;
+}
+
+
+.right-box {
+  padding-left: 290px;
+}
+
+
+#logout {
+  background-color: black;
+  color: white;
+  transition: background-color 0.4s, color 0.4s;
+  
+}
+
+#logout:hover {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+
+#menu {
+  top: 45px;
+  right: 0px;
+}
+
+
+
+
+aside a {
+  text-decoration: none;
+  font-size: 14px !important;
+}
+
+
+
+.modal-text {
+  font-size: 15px;
+}
+
+.profile-box {
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1316px) {
+  .black-sheep {
+    display: none !important;
+  }
+}
+
+@media (max-width:1000px) {
+  aside :first-child p {
+    font-size: 20px;
+  }
+
+  aside :first-child img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width:990px) {
+
+  .aside-options,
+  .aside-options-active {
+    background-color: transparent;
+  }
+
+  .right-box {
+    padding-left: 100px;
+  }
+  
+
+  #menu {
+    display: none !important;
+  }
+}
+
+@media (max-width:900px) {
+
+  .aside-options p,
+  .aside-options-active p {
+    font-size: 15px;
+  }
+  
+}
+
+@media (max-width:770px) {
+  .right-box {
+    padding-left: 40px;
+  }
+
+  #menu {
+    display: block !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .right-box {
+    padding-left: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* income */
+.shadow-box {
+  background-color: rgba(255, 255, 255, 0.527);
+  box-shadow: -2px 3px 10px rgba(19, 19, 19, 0.116);
+
+  max-height: 470px !important;
+  /* min-height: 340px; */
+}
+
+.shadow-box2 {
+  background-color: rgba(255, 255, 255, 0.527);
+  box-shadow: -2px 3px 10px rgba(19, 19, 19, 0.116);
+}
+
+.new-income-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 2px dashed rgba(0, 128, 64, 0.651);
+  height: 330px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.newSavingBox {
+  padding-top: 30px;
+  border: 2px dashed rgba(0, 128, 64, 0.651);
+  height: 330px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.incomeModal {
+  width: 50vw;
+  height: 400px;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
+  transition: transform 0.6s;
+}
+.timesBtn {
+  top: -20px !important;
+
+}
+#alertModal,
+#savedmodal {
+  width: 30vw;
+  height: 270px;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
+  transition: transform 0.6s;
+}
+
+.incomeModal input, .incomeModal select {
+  padding: 10px;
+  outline: none;
+  font-family: 'Outfit', Montserrat, Josefin sans, Arial;
+}
+
+input[type=date] {
+  cursor: pointer;
+}
+
+.incomeModal input[type=text]:focus {
+  border: rgb(6, 43, 6) 1px solid !important;
+}
+
+.incomeModal label {
+  margin-left: 7px;
+}
+
+.add-record button{
+  border-radius: 8px;
+  padding: 10px ;
+  width: 100%;
+  color: white;
+  font-family: 'Outfit', Montserrat, Arial;
+  font-weight: 500;
+  background-color: rgb(12, 34, 22);
+  border: 0;
+  font-size: 17px;
+  transition: background-color 0.5s, color 0.6s;
+  margin-bottom: 15px;
+}
+
+.filterBtn:hover {
+  background-color: rgb(0, 148, 74);
+
+}
+
+.filterBtn {
+  transition: background 0.3s;
+  background-color: rgb(1, 107, 54);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  border: none;
+  font-weight: 600;
+  border: none;
+
+}
+
+.add-record button:hover{
+  background-color: white;
+  color:rgb(10, 34, 22);
+  border: rgb(10, 34, 22) double;
+  padding: 7px 20px;
+  
+}
+
+.add-record-header button {
+  top: -35px;
+  right: -76px;
+  padding: 2px 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  transition: background-color 0.4s;
+}
+
+.add-record-header button:hover {
+  background-color: rgb(231, 72, 72) !important;
+  color: white !important;
+}
+
+.incomeModal select{
+  cursor: pointer;
+}
+
+.incomeModal select:active {
+  opacity: 0.8;
+}
+
+.incomeHeader p {
+  background-color: rgba(39, 165, 106, 0.589);
+}
+
+.incomeHeader .addNewIncomeN {
+  transition: color 0.5s, background 0.5s;
+  background-color: transparent ;
+  border: 1px white solid ;
+  color: white ;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.incomeHeader .addNewIncomeN:hover {
+  background-color: white;
+  color: rgb(2, 134, 68);
+}
+
+.incomeHeader .addNewIncomeN:active {
+  opacity: 0.6;
+}
+
+.addedIncome {
+  background-color: rgb(245, 245, 245);
+  border: none;
+}
+
+.incomeContainer {
+  height: 100%;
+  overflow: scroll;
+}
+
+.sadPig {
+  height:130px;
+  width: 130px;
+  object-fit: cover;
+}
+
+.coins {
+width: 250px;
+
+}
+
+.salary {
+  color: rgb(3, 92, 175);
+  margin-right: 20px;
+}
+
+.wages {
+  color: rgb(119, 2, 90);
+  margin-right: 20px;
+}
+
+.paycheck {
+  color: rgb(48, 114, 4);
+  margin-right: 20px;
+}
+
+.gift {
+  color: rgb(235, 144, 24);
+  margin-right: 30px;
+
+}
+
+.interest {
+  color: rgb(121, 32, 32);
+  margin-right: 20px;
+}
+
+.sales {
+  color: crimson;
+  margin-right: 30px;
+}
+
+.investmentReturns {
+  color: darkslategrey;
+}
+
+.royalties {
+  color: rgb(64, 5, 160);
+  margin-right: 20px;
+}
+
+.other {
+  color: rgb(1, 1, 77);
+  margin-right: 25px;
+}
+
+.money {
+  color: rgb(2, 105, 54);
+  margin-right: 25px;
+  font-weight: 500;
+}
+
+.filter-btn {
+  border: none;
+  background-color: rgb(2, 134, 68);
+  width: 30px;
+  height: 30px;
+  transition: background 0.5s;
+  border-radius: 4px;
+}
+
+.filter-btn:hover {
+  background-color: white;
+  border: 1px solid rgb(2, 105, 54);
+}
+
+.filter-bar {
+  background-color: rgb(10, 34, 22);
+  box-sizing: border-box;
+  width: 0px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: all 0.4s;
+  padding: 30px 00px;
+  overflow-x: hidden;
+
+}
+
+
+.bal-sidebar {
+  color: rgb(3, 221, 112);
+}
+
+.filter-text {
+  color: rgb(4, 189, 96);
+}
+
+#searchByTitle:focus {
+  outline: none !important;
+  border: 1px solid rgb(12, 34, 22) !important;
+}
+
+#incomeBox {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#incomeBox::-webkit-scrollbar{
+  opacity: 0;
+  display: none;
+}
+
+input[type=checkbox]:checked {
+  background-color: rgb(2, 199, 100);
+  outline: none;
+  border: none;
+}
+
+.wallet {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  padding-bottom: 10px;
+}
+
+
+
+/* savings */
+
+
+.savingProgressBar {
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgb(252, 252, 252);
+}
+
+.savingProgress {
+  transition: width 1s;
+  height: 20px;
+  width: 0%;
+  background-color: rgb(0, 148, 74) ;
+}
+
+.savingsProgressNum {
+  text-align: center;
+  top: -3px;
+  right: 0;
+  left: 0;
+}
+
+.savingAmount {
+  color: rgb(10, 95, 53);
+}
+
+#addAmount
+ {
+  height: 300px  !important;
+}
+
+#savedmodal {
+  height: 270px;
+}
+
+#incomeInsights {
+  width: 100% !important;
+  height: 45% !important;
+}
+
+.incomea {
+  width: 60% !important;
+}
+
+.incomeb {
+  width: 40% ;
+}

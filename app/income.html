@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../assets/js/check-login.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+    <title>Income - FundTrackr</title>
+    <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: John Inusa
+    Page: Income
+  ">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon-32x32.svg" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+
+  
+        
+                   
+   <div class="box m-0 p-0 row">
+
+      <aside class=" bg-black col-xl-9  col-lg-3 col-md-1 d-sm-none d-none d-xxl-block   d-md-block d-lg-block d-xl-block position-fixed  bottom-0   
+      pt-lg-4  ps-lg-4 pe-lg-4  pb-lg-3
+      pt-xl-4  ps-xl-4 pe-xl-4  pb-xl-3
+      pt-md-5  ps-md-4 pe-md-4  pb-md-3
+      pt-xxl-4  ps-xxl-4 pe-xxl-4  pb-xxl-4
+      h-100
+      
+      ">
+        <div class="flex d-flex justify-content-center justify-content-lg-start justify-content-md-center justify-content-sm-center  justify-content-xl-start  justify-content-xxl-start   p-0 mt-4 logo-box-2  " style="margin-bottom: 34px;">
+          <img src="../assets/images/Naira4.png" alt="logo" width="27px" height="27px" class="rounded-4">
+          <p class="d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">FundTrackr</p>
+        </div>
+
+        <a href="dashboard.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center   rounded-3 mb-3 
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-0 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 
+          ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Dashboard</p>
+        </div>
+        </a>
+
+        <a href="profile.html" onclick="userValues()">
+            <div class="aside-options p-0 m-0 d-flex align-items-start  rounded-3
+            justify-content-md-center
+            justify-content-lg-start 
+            pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+            pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+            pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+            
+            mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+            mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+            mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+            <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+              person
+            </span>
+            <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block    ">&nbsp; Profile</p>
+          </div>
+        </a>
+
+        <a href="income.html">
+          <div class="aside-options-active p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Income</p>
+        </div>
+        </a>
+
+        <a href="expenses.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Expenses</p>
+        </div>
+        </a>
+
+       <a href="savings-planner.html">
+        <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+        justify-content-md-center
+        justify-content-lg-start 
+        pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+        pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+        pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+        
+        mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+        mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+        mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+        <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+          savings
+          </span>
+        <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Savings Planner</p>
+      </div>
+       </a>
+
+        <a href="financial-analysis.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-start  rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Financial Analysis</p>
+        </div>
+        </a>
+
+        
+        <div class="p-0 mt-4 d-flex align-items-center mb-4 d-none d-sm-none d-md-none  d-lg-flex  d-xl-flex    ">
+
+          <div class="initials-pic  m-0 d-flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0"  id="initialsBig"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeName">
+              
+            </p>
+            <p class="fw-light bal-sidebar" id="bal-sidebar">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 d-flex align-content-center justify-content-start  ">
+            <button onclick="logOut()" class="d-flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100 d-none d-sm-none d-md-none  d-lg-inline-block  d-xl-inline-block   " id="logout">
+              
+              Log out
+            </button>
+        </div>
+      </aside>
+
+      <div class="col-xl-12   col-lg-12  col-md-12  col-sm-12  pt-5 right-box pe-5" onclick="closeNav()">
+
+        <div class=" mb-3 d-flex align-items-center justify-content-between  w-100 ">
+          <div>
+            <p class="h1 mb-3 "> 
+              Your income
+            </p>
+  
+            <p class="ms-2 mt-2 ">
+              Add and update your income subsequently.
+            </p>
+          </div>
+
+          <div class="d-flex justify-content-end align-items-center   p-2 rounded-pill calcToggle" >
+            <div class="input-group">
+              
+              <input type="text" class="form-control focus-ring focus-ring-light " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default shadow-none" placeholder="Search by title" id="searchByTitle">
+              <span class="input-group-text material-symbols-rounded me-3" id="inputGroup-sizing-default">
+                search
+              </span>
+            </div>
+            <span class="material-symbols-rounded fs-1 " onclick="toggleCalc();">
+              calculate
+              </span>
+              <button class="filter-btn text-white d-flex align-items-center justify-content-center ms-1 " onclick="openfNav();">
+                <span class="material-symbols-rounded fs-4" >
+                  
+                    filter_list
+                    
+                  </span>
+              </button>
+          </div>
+
+        </div>
+
+        <div class=" w-100 pb-0    h-100 pt-3  ps-0 d-flex ">
+          <div class="w-100 position-relative pb-0 mb-0 h-auto ps-xxl-5 pe-xxl-5   ps-xl-5 pe-xl-5 ps-lg-4 pe-lg-2 ps-md-4 pe-md-3 m-0  pt-5 rounded-4  shadow-box position-relative ">
+
+            <div class="w-100  p-0 m-0" id="incomeBox">
+              
+              <div class=" flex-column  align-items-center p-0 m-0 new-income-box justify-content-center" id="firstIncomePrompt">
+                <img src="../assets/images/stack-coins.jpg" alt="coinstack" class="coins">
+                <p class="  mb-3 ">You have no income records yet.</p>
+                <button class="btn btn-success" id="addNewIncome" onclick="toggleAddIncomeOn(); ">
+                  Add new record
+                </button>
+              </div>
+
+              <div class="w-100 mt-5" id="incomeContainer">
+                <!-- <div class="w-100 p-3 rounded-3 addedIncome d-flex justify-content-between align-items-center mb-3   ">
+                  <div><p>WOOO</p></div>
+                  <div><p>casd</p></div>
+                  <div><p class="money">WIWO</p></div>
+                  <div><p>CORRO</p></div>
+                  <div>
+                    <button class="btn btn-danger">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+
+                <div class="w-100 p-3 rounded-3 addedIncome d-flex justify-content-between align-items-center mb-3 ">
+                  <div><p>WOOO</p></div>
+                  <div><p>casd</p></div>
+                  <div><p>WIWO</p></div>
+                  <div><p>CORRO</p></div>
+                  <div>
+                    <button class="btn btn-danger ">
+                      Delete
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class=" w-100   px-5 rounded-top-4  bg-success fw-medium   py-3 position-absolute top-0 start-0 end-0 incomeHeader" id="incomeHeader">
+                <div class="flex w-100 justify-content-between px-5 rounded-top-4  bg-success fw-medium   py-3 position-absolute top-0 start-0 end-0  ">
+                  <div class=" w-100  ">
+                    <p class="p-2 ps-3  text-white rounded-start-5  ">Income Name</p>
+                  </div>
+  
+                  <div class="w-100 ">
+                    <p class="p-2   text-white ">Date Added</p>
+                  </div>
+  
+                  <div class="w-100 ">
+                    <p class="p-2   text-white ">Amount</p>
+                  </div>
+  
+                  <div class="w-100   ">
+                    <p class="p-2  rounded-end-5 me-3 text-white">Category</p>
+                  </div>
+  
+                  <div>
+                    <p class="addNewIncomeN p-2 rounded-3 " onclick="toggleAddIncomeOn();">
+                      New income
+                    </p>
+                    
+                  </div>
+                </div>
+  
+                
+              </div>
+              
+            </div>
+
+
+            
+
+          </div>
+        </div>
+        
+
+      </div>
+
+   </div>
+
+
+
+  <!--MOBILE MENU-->
+   <aside class=" bg-black position-fixed top-0 bottom-0 end-0 sidenav
+      pt-3  pb-3" id="mySidenav">
+        <div class="flex justify-content-start ms-4   align-items-center ps-2 mb-3 logo-box ">
+          <div class="flex mb-2 justify-content-start    p-0 mt-5  ">
+            <img src="../assets/images/transp-dollar.png" alt="logo" width="45px" height="45px">
+            <p>FundTrackr</p>
+          </div>
+
+            <a href="javascript:void(0)" class="closebtn text-white fw-bold fs-3  " onclick="closeNav()">&times;</a>
+          
+        </div>
+
+        
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('dashboard')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Dashboard</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-100  ms-4 pb-1 mb-3  rounded-3  d-active" onclick="redirect('profile')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            person
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  ">&nbsp; Profile</p>
+          
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('income')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Income</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('expenses')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Expenses</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3 aside-options-static" onclick="redirect('savings-planner')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            savings
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Savings Planner</p>
+        </div>
+
+        
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3  aside-options-static" onclick="redirect('financial-analysis')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Financial Analysis</p>
+        </div>
+
+        
+        <div class="p-0 mt-5  flex align-items-center mb-4 ms-4 ">
+
+          <div class="initials-pic  m-0 flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0 initials " id="initialsSmall"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeNameSmall">
+              
+            </p>
+            <p class="text-success fw-medium ">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 flex align-content-center justify-content-start ms-4 me-3   ">
+            <button onclick="logOut()" class="flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100" id="logout">
+              
+              Log out
+            </button>
+        </div>
+   </aside>
+            
+   <div id="menu" class="position-fixed">
+    <button class=" rounded-pill border p-2  border-opacity-10 me-3 d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none d-xxl-none " onclick="openNav()" >
+      <img src="../assets/images/hamburger-menu.svg" alt="dropdown" width="25px" >
+    </button>
+  </div>
+
+
+  <div class="position-fixed top-0 end-0 bottom-0 position-relative  py-5 filter-bar" id="filterSidenav">
+    <span class="closebtn text-white  fw-bold fs-3 position-absolute top-0 end-0 pe-3 pt-3" style="cursor: pointer;" onclick="closefNav()">&times;</span>
+    <div class="ps-1 pt-3 pe-2 ">
+      <div class="ms-4 mt-3   mb-5 d-flex">
+        <p class="text-white ms-2  fs-4 fw-bold" style="font-family: Montserrat, Outfit;">Filter options</p>
+      </div>
+  
+      <div class="ms-4  mt-3  ">
+        <p class=" fs-6 mt-4 mb-3 ms-2 filter-text" >Filter by</p>
+        <div class="form-check ms-2 ">
+          <input class="form-check-input focus-ring focus-ring-light " type="checkbox" value="" id="category" onclick="categoryVisibility();">
+          <label class="form-check-label text-white focus-ring focus-ring-light " for="category">
+            Category
+          </label>
+        </div>
+        <div class="form-check ms-2 ">
+          <input class="form-check-input focus-ring focus-ring-success" type="checkbox" value="" id="time" onclick="timeVisibility();">
+          <label class="form-check-label text-white " for="time">
+            Time
+          </label>
+        </div>
+      </div>
+  
+      <div class="mb-3 ms-4 me-4 mt-5 pe-2 filterCategory" id="filterCategory" style="display: none;">
+        <label for="filterCategory" class="form-label filter-text ms-2 fs-6  ">Select category</label>
+        <select class="form-select form-select-lg fs-5  ms-2 me-5  " name="filterCategory" id="filter-category" style="font-family: Outfit; font-size: 18px !important;">
+          <option value="all">All</option>
+          <option value="Salary">Salary</option>
+          <option value="Wages">Wages</option>
+          <option value="Paycheck">Paycheck</option>
+          <option value="Gift">Gift</option>
+          <option value="Interest">Interest</option>
+          <option value="Sales">Sales</option>
+          <option value="Investment returns">Investment returns</option>
+          <option value="Royalties">Royalties</option>
+          <option value="Other">Other</option>  
+        </select>
+      </div>
+  
+      <div class="mb-3 ms-4 me-4 mt-4 pe-2 filterTime" id="filterTime" style="display: none;">
+        <div>
+          <label for="filterMonth" class="form-label filter-text ms-2 fs-6  ">Month</label>
+            <select class="form-select form-select-lg  ps-2   fs-5  ms-2 me-2 focus-ring focus-ring-info  " name="filterMonth" id="filterMonth" style="font-family: Outfit; font-size: 17px !important;">
+              <option value="all">All</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>  
+            </select>
+        </div>
+  
+  
+        <div class="ms-2 ">
+          <label for="filterYear" class="form-label filter-text ms-2 fs-6  ">Year</label>
+          <select name="filterYear" id="filterYear" class="form-select form-select-lg ps-2  fs-5  ms-2 me-2 focus-ring focus-ring-info" style="font-family: Outfit; font-size: 17px !important;">
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+
+        
+      </div>
+
+      <div class="mb-3 ms-4 me-4 mt-5  d-flex ">
+        <button class="ms-2 w-100 filterBtn rounded-3 p-2 " id="filterBtn" onclick="filter();">
+          Filter
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Overlay-->
+
+
+
+
+
+
+  <!--Overlay-->
+  <div id="overlay">
+
+  </div>
+
+
+
+
+<!--CALCULATOR-->
+    <div id="mydiv">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+      <div id="mydivheader" class="d-flex  align-items-center justify-content-center ">
+        <div class="d-flex  justify-content-center align-items-center bg-success py-3 rounded-top-4      w-100">
+          <img src="../assets/images/Naira4.png" alt="logo" width="27px" height="27px" class="me-1 rounded-4  ">
+          <p class="p-0 m-0 calcLogo">FundTrackr </p>
+          <span style="font-size: 14px; margin-top: -10px;" class="text-white fw-medium ms-1 ">&reg;</span>
+        </div>
+      </div>
+
+      <div class="container-calc ">
+        <div class="js-result result" id="calcResult">
+
+        </div>
+
+        <div class="c-row">
+          <button onclick="
+            updateCalculation('1');
+          ">1</button>
+
+          <button onclick="
+            updateCalculation('2');
+          ">2</button>
+
+          <button onclick="
+            updateCalculation('3');
+          ">3</button>
+
+          <button onclick="
+            updateCalculation(' + ');
+          " class="orange">+</button>
+        </div>
+
+        <div class="c-row">
+          <button onclick="
+            updateCalculation('4');
+          ">4</button>
+
+          <button onclick="
+            updateCalculation('5');
+          ">5</button>
+
+          <button onclick="
+            updateCalculation('6');
+          ">6</button>
+
+          <button onclick="
+            updateCalculation(' - ');
+          " class="orange">-</button>
+        </div>
+
+        <div class="c-row">
+          <button onclick="
+            updateCalculation('7');
+          ">7</button>
+
+          <button onclick="
+            updateCalculation('8');
+          ">8</button>
+
+          <button onclick="
+            updateCalculation('9');
+          ">9</button>
+
+          <button onclick="
+            updateCalculation(' * ');
+          " class="orange">&times;</button>
+        </div>
+
+        <div class="c-row">
+          <button onclick="
+            updateCalculation('0');
+          ">0</button>
+
+          <button onclick="
+            updateCalculation('.');
+          ">.</button>
+
+          <button onclick="
+            calculation = Math.round(eval(calculation) * 1000000) / 1000000;
+            document.querySelector('.js-result').innerHTML = `${calculation}`;
+
+            
+          ">=</button>
+
+          <button onclick="
+            updateCalculation(' / ');
+          " class="orange">&divide;</button>
+        </div>
+
+        <div class="d-flex">
+          <button onclick="
+            calculation = '';
+            document.querySelector('.js-result').innerHTML = `${calculation}`
+            
+          " class="clear">CE</button>
+
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+<!--ADD INCOME MODAL-->
+    <div class="incomeModal rounded-4 shadow-lg px-5  " id="addIncomeModal"> 
+      <div class="d-flex mx-3 my-4 justify-content-center position-relative add-record-header">
+        <p class="fs-3 fw-bold text-black mb-2 ">Add new income record</p>
+
+        <button class="position-absolute   fs-3 fw-bold bg-white shadow-sm " onclick="toggleAddIncomeOff(); clearAddIncomeFields();">
+          &times;
+        </button>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center mb-4  align-items-center  "> 
+        <div class="w-50">
+          <label for="incomeName">Income name</label>
+          <input name="incomeName" type="text" placeholder="e.g Salary - September 2023" class="w-100 me-2 border border-secondary-subtle rounded-3" id="incomeName" required>
+        </div>
+
+        <div class="w-50">
+          <label for="incomeDate">Date added</label>
+          <input name="incomeDate" type="date" placeholder="e.g 10000 (no commas)" class="w-100 ms-2 border border-secondary-subtle rounded-3" id="incomeDate" required>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center align-items-center  ">
+        <div class="w-50  ">
+          <label for="incomeAmount">Income Amount</label>
+          <input name="incomeAmount" type="text" placeholder="e.g 10000 (no commas)" class="w-100 me-2  border border-secondary-subtle rounded-3" id="incomeAmount" required>
+        </div>
+
+        <div class="w-50 ">
+          <label for="incomeCategory">Income Category</label>
+          <select name="incomeCategory" type="text" placeholder="e.g 10000 (no commas)" class="w-100 ms-2 border border-secondary-subtle rounded-3" id="incomeCategory" required>
+            <option value="Salary">Salary</option>
+            <option value="Wages">Wages</option>
+            <option value="Paycheck">Paycheck</option>
+            <option value="Gift">Gift</option>
+            <option value="Interest">Interest</option>
+            <option value="Sales">Sales</option>
+            <option value="investmentReturns">Investment returns</option>
+            <option value="Royalties">Royalties</option>
+            <option value="Other">Other</option>  
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 me-0 add-record w-100 d-flex justify-content-center ">
+        <button class="mt-2 " onclick="addIncome(); firstItemOnPage();">
+          Add record
+        </button>
+      </div>
+
+    </div>
+
+
+    <!--No filters Modal-->
+    <div class="toast-container position-fixed top-0 end-0 p-0">
+      <div id="liveToastCategory" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+        <div class="toast-body d-flex justify-content-center align-items-center">
+            <span style="font-size: 20px; font-weight: bold; margin-right: 7px;" class="text-danger ">!!</span>
+          <p class="text-danger  p-0 m-0">You must choose a category!</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!--EDIT INCOME MODAL-->
+    <div class="incomeModal rounded-4 shadow-lg px-5  " id="editIncomeModal"> 
+      <div class="d-flex mx-3 my-4 justify-content-center position-relative add-record-header">
+        <p class="fs-3 fw-bold text-black mb-2 ">Edit income record</p>
+
+        <button class="position-absolute   fs-3 fw-bold bg-white shadow-sm " onclick="toggleEditIncomeOff(); clearEditIncomeFields()">
+          &times;
+        </button>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center mb-4  align-items-center  "> 
+        <div class="w-50">
+          <label for="editIncomeName">Income name</label>
+          <input name="editIncomeName" type="text" placeholder="e.g Salary - September 2023" class="w-100 me-2 border border-secondary-subtle rounded-3" id="editIncomeName" required>
+        </div>
+
+        <div class="w-50">
+          <label for="editIncomeDate">Date added</label>
+          <input name="editIncomeDate" type="date" placeholder="e.g 10000 (no commas)" class="w-100 ms-2 border border-secondary-subtle rounded-3" id="editIncomeDate" required>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center align-items-center  ">
+        <div class="w-50  ">
+          <label for="editIncomeAmount">Income Amount</label>
+          <input name="editIncomeAmount" type="text" placeholder="e.g 10000 (no commas)" class="w-100 me-2  border border-secondary-subtle rounded-3" id="editIncomeAmount" required>
+        </div>
+
+        <div class="w-50 ">
+          <label for="editIncomeCategory">Income Category</label>
+          <select name="editIncomeCategory" type="text" class="w-100 ms-2 border border-secondary-subtle rounded-3" id="editIncomeCategory" required>
+            <option value="Salary">Salary</option>
+            <option value="Wages">Wages</option>
+            <option value="Paycheck">Paycheck</option>
+            <option value="Gift">Gift</option>
+            <option value="Interest">Interest</option>
+            <option value="Sales">Sales</option>
+            <option value="investmentReturns">Investment returns</option>
+            <option value="Royalties">Royalties</option>
+            <option value="Other">Other</option>  
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 me-0 add-record w-100 d-flex justify-content-center ">
+        <button class="mt-2 " onclick="editIncome(); firstItemOnPage();">
+          Save changes
+        </button>
+      </div>
+
+    </div>
+
+
+
+
+    <script src="../assets/js/mainColorCheck.js"></script>
+  <script src="../assets/js/income.js"></script>
+  <script src="../assets/js/calculator.js"></script>
+
+  <script>
+    let firstLetter = (localStorage.getItem("firstname").slice(0,1));
+    let lastLetter = (localStorage.getItem("lastname").slice(0,1));
+
+
+    let firstname = localStorage.getItem('firstname');
+    let lastname = localStorage.getItem('lastname');
+
+    document.querySelector('.activeName').innerHTML = firstname + ' ' + lastname;
+    document.querySelector('.activeNameSmall').innerHTML = firstname + ' ' + lastname;
+
+    document.getElementById('initialsBig').innerHTML = firstLetter + lastLetter; 
+    document.getElementById ('initialsSmall').innerHTML = firstLetter + lastLetter;  
+    
+    //let username = localStorage.getItem('username');
+    let userCurrency = localStorage.getItem(`${username}Currency`);
+    document.getElementById('bal-sidebar').innerHTML = userCurrency + localStorage.getItem(`${username}Main`);
+  </script>
+
+
+
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/slidenav.js"></script>
+
+</body>
+</html>

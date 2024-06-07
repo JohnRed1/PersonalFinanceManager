@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: John Inusa
+    Page: Home page
+  ">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon-32x32.svg" >
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/general.css">
+  <link rel="stylesheet" href="./assets/css/nav.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <title>FundTrackr - Your money made easy</title>
+</head>
+  <body>
+
+    <!--Slide in panel-->
+    <aside id="mySidenav" class="sidenav ">
+      <div class="flex justify-content-center align-content-center p-0 border ">
+        <img src="./assets/images/Naira4.png" alt="logo" class="img-fluid rounded-4 " width="25px" >
+        <p class="fs-3 p-0 mb-0">FundTrackr </p>
+      </div>
+      <div class="pt-1" >
+        <a href="javascript:void(0)" class="closebtn " onclick="closeNav()">&times;</a>
+        <a href="./"><button>Home</button></a>
+        <a href="about.html"><button>About</button></a> 
+        <!-- <a href="meet.html"><button>Meet the team</button></a>
+        <a href="donate.html"><button>Donate</button></a> -->
+        <a href="helpdesk.html"><button>Help desk</button></a>
+        <a href="./login/login.html"><div class="btn btn-light ms-2">Login</div></a>
+      </div>
+    </aside>
+
+    <nav class="flex align-content-between">
+
+      <div class="nav-left">
+        <div class="flex justify-content-center align-content-center ">
+          <img src="./assets/images/Naira4-removebg-preview (1).webp" class="mb-3" alt="logo">
+          <p>FundTrackr</p>
+          <p>&trade;</p>
+        </div>
+      </div>
+
+      <div class="flex nav-mid">
+        <a href="./"><div><button>Home</button></div></a>
+        <a href="about.html"><div><button>About</button></div></a>
+        <!-- <a href="meet.html"><div><button>Meet the team</button></div></a> -->
+        <!-- <a href="donate.html"><div><button>Donate</button></div></a> -->
+        <a href="helpdesk.html"><div><button>Help desk</button></div></a>
+      </div>
+
+      <div class="flex nav-right">
+        
+        <a href="./login/login.html"><div><button>Login</button></div></a>
+        <a href="./login/Signup.html"><div><button>Sign up</button></div></a>
+
+      </div>
+      <button class="flex flex-middle rounded-5 p-2" id="toggle-menu" onclick="openNav()">
+        <img src="./assets/images/hamburger-menu.svg" alt="hamburger-menu" width="25px">
+      </button>
+
+    </nav>
+ 
+    <section class="general-container" onclick="closeNav()">
+
+      <section class="s1 grid">
+
+        <div class="s1-left">
+          <h1>
+            Your Money <br><span>Made Easy</span>
+          </h1>
+
+         <div class="flex s1-p-div ">
+          <p>
+            Organize your finances with one of the <span>best free tools</span> on the market. 
+            
+            With FundTrackr, you can  keep your financial records at <span>zero cost!</span>
+          </p>
+         </div>
+
+         <div class="flex">
+          <a href="about.html">
+            <button>
+              Learn More
+            </button>
+          </a>
+
+          <a href="./login/Signup.html">
+            <button>
+              Get Started
+            </button>
+          </a>
+         </div>
+        </div>
+
+        <div class="s1-right">
+          <img src="./assets/images/set-elements-topic-finance-money-earnings-flat-doodle-style_308665-44.jpg" alt="dff">
+        </div>
+
+        <img class="splash" src="./assets/images/splash.png" alt="" width="200px">
+        <img class="splash2" src="./assets/images/splash.png" alt="" width="240px">
+    
+      </section>
+
+      <!-- <section class="s2 flex ">
+        <div>
+          <img src="./assets/images/Happy-piggy.jpg" alt="">          
+        </div>
+        <div></div> -->
+      </section>
+
+    </section>
+
+    <script src="./assets/js/slidenav.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+  </body>
+</html> 

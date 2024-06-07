@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: Jesse Emmanuel
+    Page: Meet the team page
+  ">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.svg" >
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/general.css">
+  <link rel="stylesheet" href="./assets/css/nav.css">
+  <link rel="stylesheet" href="./assets/css/meet.css">
+  <title>FundTrackr - Your money made easy</title>
+</head>
+  <body>
+
+    <!--Slide in panel-->
+  <aside id="mySidenav" class="sidenav">
+    <div class="flex">
+      <img src="./assets/images/transp-dollar.png" alt="logo" width="45px" height="45px">
+      <p>FundTrackr</p>
+    </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./"><button>Home</button></a>
+    <a href="about.html"><button>About</button></a> 
+    <a href="meet.html"><button>Meet the team</button></a>
+    <a href="donate.html"><button>Donate</button></a>
+    <a href="helpdesk.html"><button>Help desk</button></a>
+  </aside>
+
+    <nav class="flex">
+
+      <div class="nav-left">
+        <div class="flex">
+          <img src="./assets/images/dollarcoin2.webp" alt="logo">
+          <p>FundTrackr</p>
+        </div>
+      </div>
+
+      <div class="flex nav-mid">
+        <a href="./"><div><button>Home</button></div></a>
+        <a href="about.html"><div><button>About</button></div></a>
+        <a href="meet.html"><div><button>Meet the team</button></div></a>
+        <a href="donate.html"><div><button>Donate</button></div></a>
+        <a href="helpdesk.html"><div><button>Help desk</button></div></a>
+      </div>
+
+      <div class="flex nav-right">
+        
+        <a href="./login/login.html"><div><button>Login</button></div></a>
+        <a href="./login/Signup.html"><div><button>Sign up</button></div></a>
+
+        <button class="flex flex-middle" id="toggle-menu" onclick="openNav()">
+          <img src="./assets/images/hamburger-menu.svg" alt="hamburger-menu" width="20px">
+        </button>
+      </div>
+
+    </nav>
+
+    <section class="general-container" onclick="closeNav()">
+
+
+    </section>
+
+    <script src="./assets/js/slidenav.js"></script>
+  </body>
+</html> 

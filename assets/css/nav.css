@@ -1,0 +1,247 @@
+/*nav code==================================================================================*/
+nav {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 70px;
+  z-index: 5;
+  align-items: center;  
+  padding: 0px 8%;
+  justify-content: space-between;
+  
+}
+
+#toggle-menu {
+ display: none; 
+}
+
+.nav-mid {
+  align-items: center;
+  box-sizing: border-box;
+  
+}
+
+.nav-mid div,
+.nav-mid a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  
+}
+
+.nav-mid button {
+  color: rgb(0, 88, 15);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-left div {
+  align-items: center;
+}
+
+.nav-left img {
+  width: 25px;
+  height: 25px;
+}
+
+.nav-left p,
+.drawer :first-child p,
+.logo-box p {
+  font-weight: 900;
+  font-family: "Montserrat";
+  font-size: 25px;
+}
+
+.logo-box-2 p {
+  font-weight: 900;
+  font-family: 'Montserrat', Josefin sans;
+  font-size: 22px;
+}
+
+.nav-mid button:hover{
+  background-color: rgb(0, 145, 73);
+  color: rgb(241, 255, 250);
+}
+
+.nav-mid button:active {
+  background-color: rgb(30, 87, 54);
+  color: rgb(255, 250, 207);
+}
+
+
+nav :nth-child(2) button {
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 12px;
+  border: none;
+  margin: 0px 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+
+.nav-right {
+  margin-right: 7px;
+  align-items: center;
+}
+
+.nav-right button {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.nav-right a:first-of-type button {
+  border: none;
+  color: rgb(0, 126, 57);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.nav-right a:nth-of-type(2) button {
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: none;
+  background-color: rgb(30, 87, 54);
+  color: rgb(255, 250, 207);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.nav-right a:first-of-type button:hover,
+.nav-right a:nth-of-type(2) button:hover {
+  background-color: rgb(0, 145, 73);
+  color: rgb(241, 255, 250);
+}
+
+
+/*slide-in panel======================================================================================*/
+.sidenav{
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: rgb(23, 66, 41);
+}
+
+/* nav menu links =======================================================================================*/
+.sidenav a {
+  /* padding: 0px 0px 6px 32px; */
+  text-decoration: none;
+  font-family: "Outfit";
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(30, 87, 54);
+  display: block;
+  transition: 0.3s;
+  transition: padding 0.6s;
+
+}
+
+.sidenav button {
+  white-space: nowrap;
+}
+
+
+
+
+
+.sidenav button {
+  box-sizing: border-box;
+  font-size: 19px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid rgb(23, 66, 41);
+  color: rgb(241, 255, 250);
+  padding: 10px 12px;
+  border-radius: 5px;
+  transition: color 0.5s, border 0.5s;
+  
+}
+
+.sidenav button:hover {
+  border: 1px solid rgb(172, 255, 197);
+  color: rgb(172, 255, 197);
+}
+
+
+.sidenav a:hover {
+  color: rgb(0, 145, 73);
+  padding-left: 45px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  margin-left: 50px;
+  color: white;
+}
+
+
+
+.sidenav .closebtn:hover {
+  color: rgb(172, 255, 197);;
+}
+
+
+#toggle-menu {
+  border: none;
+  transition: background-color 0.2s;
+}
+
+#toggle-menu:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+aside div {
+  padding: 0px;
+  align-items: center;
+  /* margin-bottom: 5px; */
+}
+
+aside div p {
+  /* margin-left: 7px; */
+  color: rgba(255, 255, 255, 0.966);
+}
+
+
+
+@media (max-width:1080px) {
+  nav {
+    padding: 0px 4%;
+  }
+}
+
+@media (max-width:990px) {
+
+  /*nav response*/
+  .nav-mid {
+    display: none;
+  }
+  #toggle-menu {
+    display: flex; 
+   }
+}
+
+@media (max-width:600px) {
+  .nav-right a:first-of-type button,
+  .nav-right a:nth-of-type(2) button  {
+    display: none;
+  }
+
+  
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../assets/js/check-login.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+    <title>Financial Analysis - FundTrackr</title>
+    <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: John Inusa
+    Page: Financial Analysis
+  ">
+  
+  <style>
+    body {
+      overflow: auto;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon-32x32.svg" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+<body>
+
+
+  
+        
+                   
+   <div class="box m-0 p-0 row">
+
+      <aside class=" bg-black col-xl-9  col-lg-3 col-md-1 d-sm-none d-none d-xxl-block   d-md-block d-lg-block d-xl-block position-fixed  bottom-0   
+      pt-lg-4  ps-lg-4 pe-lg-4  pb-lg-3
+      pt-xl-4  ps-xl-4 pe-xl-4  pb-xl-3
+      pt-md-5  ps-md-4 pe-md-4  pb-md-3
+      pt-xxl-4  ps-xxl-4 pe-xxl-4  pb-xxl-4
+      h-100
+      
+      ">
+        <div class="flex d-flex justify-content-center justify-content-lg-start justify-content-md-center justify-content-sm-center  justify-content-xl-start  justify-content-xxl-start   p-0 mt-4 logo-box-2  " style="margin-bottom: 34px;">
+          <img src="../assets/images/Naira4.png" alt="logo" width="27px" height="27px" class="rounded-4">
+          <p class="d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">FundTrackr</p>
+        </div>
+
+        <a href="dashboard.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center   rounded-3 mb-3 
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-0 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 
+          ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Dashboard</p>
+        </div>
+        </a>
+
+        <a href="profile.html" onclick="userValues()">
+            <div class="aside-options p-0 m-0 d-flex align-items-start  rounded-3
+            justify-content-md-center
+            justify-content-lg-start 
+            pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+            pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+            pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+            
+            mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+            mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+            mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+            <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+              person
+            </span>
+            <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block    ">&nbsp; Profile</p>
+          </div>
+        </a>
+
+        <a href="income.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Income</p>
+        </div>
+        </a>
+
+        <a href="expenses.html">
+          <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  d-none d-sm-none d-md-none  d-lg-block d-xl-block  ">&nbsp; Expenses</p>
+        </div>
+        </a>
+
+       <a href="savings-planner.html">
+        <div class="aside-options p-0 m-0 d-flex align-items-center rounded-3
+        justify-content-md-center
+        justify-content-lg-start 
+        pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+        pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+        pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+        
+        mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+        mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+        mt-md-0 mb-md-2  ms-md-0  me-md-0 ">
+        <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+          savings
+          </span>
+        <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Savings Planner</p>
+      </div>
+       </a>
+
+        <a href="financial-analysis.html">
+          <div class="aside-options-active p-0 m-0 d-flex align-items-start  rounded-3
+          justify-content-md-center
+          justify-content-lg-start 
+          pt-lg-2 pb-lg-2  ps-lg-3  pe-lg-0  
+          pt-xl-2 pb-xl-2  ps-xl-3  pe-xl-0 
+          pt-md-2 pb-md-2  ps-md-2  pe-md-2 
+          
+          mt-lg-2 mb-lg-2  ms-lg-0  me-lg-0  
+          mt-xl-2 mb-xl-3  ms-xl-0  me-xl-0 
+          mt-md-0 mb-md-2  ms-md-0  me-md-0  ">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 d-none d-sm-none d-md-none  d-lg-block d-xl-block   ">&nbsp; Financial Analysis</p>
+        </div>
+        </a>
+
+        
+        <div class="p-0 mt-4 d-flex align-items-center mb-4 d-none d-sm-none d-md-none  d-lg-flex  d-xl-flex    ">
+
+          <div class="initials-pic  m-0 d-flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0"  id="initialsBig"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeName">
+              
+            </p>
+            <p class="fw-light bal-sidebar" id="bal-sidebar">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 d-flex align-content-center justify-content-start  ">
+            <button onclick="logOut()" class="d-flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100 d-none d-sm-none d-md-none  d-lg-inline-block  d-xl-inline-block   " id="logout">
+              
+              Log out
+            </button>
+        </div>
+      </aside>
+
+      <div class="col-xl-12   col-lg-12  col-md-12  col-sm-12  pt-5 right-box pe-5" onclick="closeNav()">
+
+        <div class=" mb-3 d-flex align-items-center justify-content-between  w-100 ">
+          <div>
+            <p class="h1 mb-3 "> 
+              Your insights
+            </p>
+  
+            <p class="ms-2 mt-2 ">
+              View detailed breakdowns of your financial data.
+            </p>
+          </div>
+
+
+        </div>
+
+        <div class=" w-100 pb-0    h-100 pt-0  ps-0 d-flex ">
+          <div class="w-100 position-relative pb-0 mb-0 h-auto  ps-lg-4 pe-lg-2 ps-md-4 pe-md-3 m-0  pt-5 rounded-4  shadow-box2 position-relative ">
+
+            <div class="w-100  p-0 m-0 flex align-items-start  px-5">
+
+              <div class="incomea  me-5 ">
+                <p class="mb-3 pb-2 fs-4 w-100 text-center  ">Income breakdown</p>
+                <div class="" id="incomeInsightsBox">
+                
+                  
+                    <canvas id="incomeInsights" class=" w-100 ">
+
+                    </canvas>
+
+                </div>
+              </div>
+
+              <div class="incomeb ms-5">
+                <p class="mb-3 pb-2 fs-4  text-center ">Breakdown by category</p>
+                <div class="w-100" id="incomeCategoriesBox">
+               
+                
+                  <canvas id="incomeCategories" class=" ">
+  
+                  </canvas>
+  
+                </div>
+              </div>
+
+              
+            </div>
+
+
+            
+
+          </div>
+        </div>
+        
+
+      </div>
+
+   </div>
+
+
+
+  <!--MOBILE MENU-->
+   <aside class=" bg-black position-fixed top-0 bottom-0 end-0 sidenav
+      pt-3  pb-3" id="mySidenav">
+        <div class="flex justify-content-start ms-4   align-items-center ps-2 mb-3 logo-box ">
+          <div class="flex mb-2 justify-content-start    p-0 mt-5  ">
+            <img src="../assets/images/transp-dollar.png" alt="logo" width="45px" height="45px">
+            <p>FundTrackr</p>
+          </div>
+
+            <a href="javascript:void(0)" class="closebtn text-white fw-bold fs-3  " onclick="closeNav()">&times;</a>
+          
+        </div>
+
+        
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('dashboard')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            grid_view
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Dashboard</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-100  ms-4 pb-1 mb-3  rounded-3  d-active" onclick="redirect('profile')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            person
+          </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1  ">&nbsp; Profile</p>
+          
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('income')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            paid
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Income</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3 rounded-3  aside-options-static" onclick="redirect('expenses')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            account_balance_wallet
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Expenses</p>
+        </div>
+
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3 aside-options-static" onclick="redirect('savings-planner')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); ">
+            savings
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Savings Planner</p>
+        </div>
+
+        
+        <div class="flex align-items-center  ps-3 pe-2 pt-1 w-75 ms-4 pb-1 mb-3  rounded-3  aside-options-static" onclick="redirect('financial-analysis')">
+          <span class="material-symbols-rounded" style="color: rgba(255, 255, 255, 0.952); " >
+            finance
+            </span>
+          <p class="text-white p-0 m-0 pt-1 pb-1 ">&nbsp; Financial Analysis</p>
+        </div>
+
+        
+        <div class="p-0 mt-5  flex align-items-center mb-4 ms-4 ">
+
+          <div class="initials-pic  m-0 flex align-items-center rounded-pill justify-content-center border  border-1 me-2 ">
+            <p class="text-white p-0 m-0 initials " id="initialsSmall"  >
+              
+            </p>
+          </div>
+
+          <div class="p-0 m-0 ">
+            <p class="activeNameSmall">
+              
+            </p>
+            <p class="text-success fw-medium ">
+              Active
+            </p>
+          </div>
+
+        </div>
+        
+
+        <div class=" m-0 p-0 flex align-content-center justify-content-start ms-4 me-3   ">
+            <button onclick="logOut()" class="flex align-items-center justify-content-center border border-1 rounded-3 pt-2 pb-2 ps-3 pe-3 w-100" id="logout">
+              
+              Log out
+            </button>
+        </div>
+   </aside>
+            
+   <div id="menu" class="position-fixed">
+    <button class=" rounded-pill border p-2  border-opacity-10 me-3 d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none d-xxl-none " onclick="openNav()" >
+      <img src="../assets/images/hamburger-menu.svg" alt="dropdown" width="25px" >
+    </button>
+  </div>
+
+
+
+
+
+
+  
+
+  
+
+ 
+
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+
+  
+
+  </div>
+
+  <!--Overlay-->
+  <div id="overlay">
+
+  </div>
+
+  <script src="../assets/js/chart.js"></script>
+  <script>
+    let userName = localStorage.getItem('username');
+
+    let incomeArray = JSON.parse(localStorage.getItem(`${userName}Income`));
+    let ExpensesArray = JSON.parse(localStorage.getItem(`${userName}Expenses`));
+
+
+    let incomeTitles = [];
+    let incomeAmounts = [];
+    let categories = ['Salary', 'Wages', 'Paycheck', 'Gift', 'Interest', 'Sales', 'Investment returns', 'Royalties', 'Other' ];
+    let categoryValues = [];
+
+    let incomeSalaries = 0;
+    let incomeWages = 0;
+    let incomePaycheck = 0;
+    let incomeGift = 0;
+    let incomeInterest = 0;
+    let incomeSales = 0;
+    let incomeInvestments = 0;
+    let incomeRoyalties = 0;
+    let incomeOther = 0;
+
+    for (let i =0;  i < incomeArray.length; i++) {
+      let currentIndex = incomeArray[i];
+
+      incomeTitles.push(incomeArray[i].incomeName);
+      incomeAmounts.push(incomeArray[i].incomeAmount);
+
+      if (currentIndex.incomeCategory == 'Salary') {
+        incomeSalaries += +currentIndex.incomeAmount;
+      }
+      else 
+      if (currentIndex.incomeCategory == 'Wages') {
+        incomeWages += +currentIndex.incomeAmount;
+      }
+      else 
+      if (currentIndex.incomeCategory == 'Paycheck') {
+        incomePaycheck += +currentIndex.incomeAmount;
+      }
+      else 
+      if (currentIndex.incomeCategory == 'Gift') {
+        incomeGift += +currentIndex.incomeAmount;
+      }
+      else
+      if (currentIndex.incomeCategory == 'Interest') {
+        incomeInterest += +currentIndex.incomeAmount;
+      }
+      else 
+      if (currentIndex.incomeCategory == 'Sales') {
+        incomeSales += +currentIndex.incomeAmount;
+      }
+      else
+      if (currentIndex.incomeCategory == 'InvestmentReturns') {
+        incomeInvestments += +currentIndex.incomeAmount;
+      }
+      else
+      if (currentIndex.incomeCategory == 'Royalties') {
+        incomeRoyalties += +currentIndex.incomeAmount;
+      }
+      else {
+        incomeOther += +currentIndex.incomeAmount;
+      }
+
+      
+    }
+
+
+    categoryValues.push(incomeSalaries, incomeWages, incomePaycheck, incomeGift, incomeInterest, incomeSales, incomeInvestments, incomeRoyalties, incomeOther);
+
+    
+
+
+
+
+    const incomeInsights = document.getElementById('incomeInsights');
+
+    let incomeAnalysis =  new Chart(incomeInsights, {
+      type: 'bar',
+      data: {
+        labels: incomeTitles,
+        datasets: [{
+          label: 'Income amount',
+          backgroundColor: ['rgb(0, 148, 74)', 'rgb(235, 144, 24)', 'crimson', 'rgb(48, 114, 4)', 'rgb(119, 2, 90)', 'rgb(3, 92, 175)'] ,
+          data: incomeAmounts,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+
+
+
+
+    const incomeCategories = document.getElementById('incomeCategories');
+
+    let categoryInsights =  new Chart(incomeCategories, {
+      type: 'pie',
+      data: {
+        labels: categories,
+        datasets: [{
+          label: 'Income amount',
+          backgroundColor: ['rgb(0, 148, 74)', 'rgb(235, 144, 24)', 'crimson', 'rgb(48, 114, 4)', 'rgb(119, 2, 90)', 'rgb(3, 92, 175)'] ,
+          data: categoryValues,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+  <script src="../assets/js/mainColorCheck.js"></script>
+  <script src="../assets/js/js-confetti.js"></script>
+  <script src="../assets/js/confetti.js"></script>
+  
+
+  <script>
+    let firstLetter = (localStorage.getItem("firstname").slice(0,1));
+    let lastLetter = (localStorage.getItem("lastname").slice(0,1));
+
+
+    let firstname = localStorage.getItem('firstname');
+    let lastname = localStorage.getItem('lastname');
+
+    document.querySelector('.activeName').innerHTML = firstname + ' ' + lastname;
+    document.querySelector('.activeNameSmall').innerHTML = firstname + ' ' + lastname;
+
+    document.getElementById('initialsBig').innerHTML = firstLetter + lastLetter; 
+    document.getElementById ('initialsSmall').innerHTML = firstLetter + lastLetter;  
+    
+    let username = localStorage.getItem('username');
+    let userCurrency = localStorage.getItem(`${username}Currency`);
+    document.getElementById('bal-sidebar').innerHTML = userCurrency + localStorage.getItem(`${username}Main`);
+  </script>
+
+
+
+
+
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/slidenav.js"></script>
+
+</body>
+</html>

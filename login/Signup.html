@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/Sign up.css">
+    <meta name="description" content="Name: FundTrackr, a personal finance manager app for managing your finances.
+    Author: John Inusa
+    Page: Sign up page.
+    ">
+    
+    
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-32x32.svg" >
+    
+    <title>Sign up for FundTrackr</title>
+</head>
+<body>
+    <div class="general-container">
+        <div class="cont">
+            <div>
+                <div class="logodiv">
+                    <img src="../assets/images/Naira4-removebg-preview.png" alt="logo">
+                    <h1>FundTrackr</h1>
+                </div>
+
+                <div class="linediv" id="slinediv" >
+                    <div class="line"></div>
+                        <p id="login-p">Sign up for FundTrackr</p>
+                    <div class="line"></div>
+                </div>
+
+                <form action="" id="form" method="post" class="login-form">
+                    <div class="name-div">
+                        <input type="text" id="firstname" placeholder="First Name" required>
+                        <input type="text" id="lastname" placeholder="Last Name" required>
+                    </div>
+                    <div class="emaildiv">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <div><img src="../assets/images/vtick.png" alt="check" id="check" width="18"></div>
+                    </div>
+
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
+                    <button type="button" onclick="saveData()" id="liveToastBtn">Sign up</button>
+
+
+                    
+                </form>
+    
+                
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                      <div class="toast-body d-flex justify-content-center align-items-center">
+                        <span style="font-size: 20px; font-weight: 700; margin-right: 7px;" class="text-success">&checkmark;</span>
+                        <p class="text-success p-0 m-0">Account created successfully</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                    <div id="liveToastP" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                      <div class="toast-body d-flex justify-content-center align-items-center">
+                          <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+                        <p class="text-danger p-0 m-0">Please fill out all fields!</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                    <div id="liveToastC" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                      <div class="toast-body d-flex justify-content-center align-items-center">
+                        <span style="font-size: 26px; font-weight: 600; margin-right: 7px;" class="text-danger ">&times;</span>
+                        <p class="text-danger p-0 m-0">Sorry, Passwords don't match!</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                  <div id="liveToastU" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                    <div class="toast-body d-flex justify-content-center align-items-center">
+                      <span style="font-size: 26px; font-weight: 600; margin-right: 7px;" class="text-danger ">&times;</span>
+                      <p class="text-danger p-0 m-0">Usernames can't be more than 10 characters!</p>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="toast-container position-fixed top-0 end-0 p-2">
+                <div id="liveToastW" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                  <div class="toast-body d-flex justify-content-center align-items-center">
+                    <span style="font-size: 26px; font-weight: 600; margin-right: 7px;" class="text-danger ">&times;</span>
+                    <p class="text-danger p-0 m-0">Invalid Email address!</p>
+                  </div>
+                </div>
+            </div>
+
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                    <div id="liveToastD" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                      <div class="toast-body d-flex justify-content-center align-items-center">
+                          <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+                        <p class="text-danger p-0 m-0">Email or username already in use</p>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="toast-container position-fixed top-0 end-0 p-2">
+                  <div id="liveToastE" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                    <div class="toast-body d-flex justify-content-center align-items-center">
+                        <span style="font-size: 20px; font-weight: 600; margin-right: 7px;" class="text-danger ">!!</span>
+                      <p class="text-danger  p-0 m-0">Passwords must not be less than 6 characters!</p>
+                    </div>
+                  </div>
+              </div>
+
+                <p>Already have an account? <a href="./login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <a class="back" href="../index.html">Back to home</a>
+    <script src="../assets/js/login.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
